@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kiến Thức Tổng Hợp Javascript</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="plugin/scripts/shCore.js"></script>
+	<script type="text/javascript" src="plugin/scripts/shBrushJScript.js"></script>
+	<link type="text/css" rel="stylesheet" href="plugin/styles/shCoreDefault.css"/>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+</head>
+<body>
+	<!--container-->
+	<div class="container" id="container">
+		<ul class="nav nav-tabs">
+	    	<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+	    	<li><a data-toggle="tab" href="#menu1">Javascript</a></li>
+	    	<li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+	    	<li><a data-toggle="tab" href="#menu3">Menu 3</a></li>
+	  	</ul>
+
+	  	<div class="tab-content">
+		    <div id="home" class="tab-pane fade in active">
+		      	<h3>HOME</h3>
+		      	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		    </div>
+		    <div id="menu1" class="tab-pane fade">
+		      	<h3>Javascript</h3>
+		      	<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				  	<div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingOne">
+					      	<h4 class="panel-title">
+					        	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"  aria-expanded="false" aria-controls="collapseOne">
+					        		Event ( Sự kiện )
+					        	</a>
+					      	</h4>
+					    </div>
+					    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					      	<div class="panel-body">
+					        	<ol>
+					        		<li>
+					        			<p class="event">onclick <span>Xẩy ra khi click vào thẻ HTML</span></p> 
+					        		</li>
+					        		<li>
+					        			<p class="event">ondblclick <span>Xẩy ra khi double click vào thẻ HTML</span></p>
+					        		</li>
+					        		<li>
+					        			<p class="event">onchange <span> Xẩy ra khi giá trị của thẻ HTML thay đổi .Thường dùng trong các thẻ form</span></p>
+					        		</li>
+
+					        		<li>
+					        			<p class="event">onmouseover,onmouseenter <span> Xẩy ra khi con chuột bắt đầu đi vào thẻ HTML</span></p>
+					        		</li>
+
+					        		<li>
+					        			<p class="event">onmouseout,onmouseleave <span>Xẩy ra khi con chuột bắt đầu rời khỏi thẻ HTML</span></p>
+					        		</li>
+
+					        		<li>
+					        			<p class="event">onmousemove <span>Khi con chuột di chuyển bên trong thẻ HTML</span></p>
+					        		</li>
+
+					        		<li>
+					        			<p class="event">onkeydown <span>Xẩy ra khi gõ một phím bất kỳ</span></p>
+					        		</li>
+
+					        		<li>
+					        			<p class="event">onload <span>Xẩy ra khi  bắt đầu chạy </span></p>
+					        		</li>
+
+					        		<li>
+					        			<p class="event">onkeyup <span>Xẩy ra khi gõ phím  nhưng khi nhả phím ra thì sự kiện mới được kích hoạt</span></p>
+					        		</li>
+
+					        		<li>
+					        			<p class="event">onkeypress <span>Xẩy ra khi nhấn một phím bất kỳ vào ô input</span></p>
+					        		</li>
+					        		<li>
+					        			<p class="event">onblur <span>Xẩy ra khi con chuột rời khỏi ô input</span></p>
+					        		</li>
+					        	</ol>
+					      	</div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingTwo">
+					      	<h4 class="panel-title">
+					        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+					         	Bài Tập Về Hàm
+					       	 </a>
+					      	</h4>
+					    </div>
+					    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					      	<div class="panel-body">
+					        	<ol>
+					        		<li>
+					        			<p>
+					        				Viết hàm đảo ngược 1 số !   n= 32243 => 34223 
+					        				<a data-toggle="modal" data-target="#myModal1" class="view-kq">Xem code</a>
+				        				</p>
+					        			<div class="modal fade" id="myModal1" role="dialog">
+										    <div class="modal-dialog modal-lg">
+										      <div class="modal-content">
+										        <div class="modal-header">
+										          <button type="button" class="close" data-dismiss="modal">&times;</button>
+										          <h4 class="modal-title">n= 32243 => 34223 </h4>
+										        </div>
+										        <div class="modal-body">
+											        <pre class="brush: js;">
+											        	<script type="text/javascript">
+															var n = 32243;
+															// ep kieu number sang string
+															var string_n = n.toString();
+
+															// chuyen string ve mang array
+															var arr_n =string_n.split("");
+
+															//dao nguoc mang  vi du  234 -> 432
+															var arr_reverse = arr_n.reverse();
+
+															//chuyen mang thanh string 
+															console.log(arr_reverse.join(""));
+														</script>
+													</pre>
+										        </div>
+										        <div class="modal-footer">
+										          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										        </div>
+										      </div>
+										    </div>
+										  </div>
+					        		</li>
+					        		<li>
+					        			<p>
+					        				Viết 1 hàm tạo ra tất cả các từ kết hợp lại của 1 chuỗi  ! name = "trungphu" => phu,trung,ung,hu,...
+					        			</p>
+					        		</li>
+					        		<li>
+					        			<p>
+					        				Viết hàm sắp xếp 1 chuỗi thành alphabetical  : name = phu => hpu
+					        				<a data-toggle="modal" data-target="#myModal3" class="view-kq">Xem code</a>
+					        			</p>
+					        			<div class="modal fade" id="myModal3" role="dialog">
+										    <div class="modal-dialog modal-lg">
+										      <div class="modal-content">
+										        <div class="modal-header">
+										          <button type="button" class="close" data-dismiss="modal">&times;</button>
+										          <h4 class="modal-title">name = phu => hpu </h4>
+										        </div>
+										        <div class="modal-body">
+											        <pre class="brush: js;">
+											        	<script type="text/javascript">
+															var name = "phan trung phu";
+
+															// chuyen va mang
+															var arr_name = name.split("");
+
+															//sap xep 
+															arr_name = arr_name.sort();
+															console.log(arr_name.join(""));
+
+															//Ta co ham
+															function sapxepalpha(name) {
+																return name.split("").sort().join("");
+															}
+															console.log(sapxepalpha(name));
+														</script>
+													</pre>
+										        </div>
+										        <div class="modal-footer">
+										          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										        </div>
+										      </div>
+										    </div>
+										  </div>
+					        		</li>
+					        		<li>
+					        			<p>
+					        				Viết hàm chuyển đổi ký tự đầu tiên của 1 từ thành chữ hoa name = phan trung phu => Phan Trung Phu
+					        				<a data-toggle="modal" data-target="#myModal4" class="view-kq">Xem code</a>
+					        			</p>
+					        			<div class="modal fade" id="myModal4" role="dialog">
+										    <div class="modal-dialog modal-lg">
+										      <div class="modal-content">
+										        <div class="modal-header">
+										          <button type="button" class="close" data-dismiss="modal">&times;</button>
+										          <h4 class="modal-title">name = phan trung phu => Phan Trung Phu (*)
+										        </div>
+										        <div class="modal-body">
+											        <pre class="brush: js;">
+											        	<script type="text/javascript">
+															function uppercase(str) {
+															  var array1 = str.split(' ');
+															  var newarray1 = [];
+															    
+															  for(var x = 0; x < array1.length; x++){
+															      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+															  	}
+															  return newarray1.join(' ');
+															}
+															console.log(uppercase("the quick brown fox"));
+														</script>
+													</pre>
+										        </div>
+										        <div class="modal-footer">
+										          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										        </div>
+										      </div>
+										    </div>
+									  	</div>
+					        		</li>
+					        		<li>
+					        			<p>
+					        				Tìm từ dài nhất trong 1 chuỗi  name = trung phu na => trung
+					        				<a data-toggle="modal" data-target="#myModal4" class="view-kq">Xem code</a>
+					        			</p>
+					        			<div class="modal fade" id="myModal4" role="dialog">
+										    <div class="modal-dialog modal-lg">
+										      <div class="modal-content">
+										        <div class="modal-header">
+										          <button type="button" class="close" data-dismiss="modal">&times;</button>
+										          <h4 class="modal-title">name = phan trung phu => Phan Trung Phu (*)
+										        </div>
+										        <div class="modal-body">
+											        <pre class="brush: js;">
+											        	<script type="text/javascript">
+															function uppercase(str) {
+															  var array1 = str.split(' ');
+															  var newarray1 = [];
+															    
+															  for(var x = 0; x < array1.length; x++){
+															      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+															  	}
+															  return newarray1.join(' ');
+															}
+															console.log(uppercase("the quick brown fox"));
+														</script>
+													</pre>
+										        </div>
+										        <div class="modal-footer">
+										          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										        </div>
+										      </div>
+										    </div>
+									  	</div>
+					        		</li>
+					        	</ol>
+					      	</div>
+					    </div>
+				  	</div>
+				  	<div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingThree">
+					      	<h4 class="panel-title">
+					        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+					         		Bài tập về mảng 
+					        	</a>
+					      </h4>
+					    </div>
+					    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+					      	<div class="panel-body">
+					       		<ol>
+					       			<li>
+					       				<p>
+					       					Viết hàm kiểm tra xem dữ liệu vào có phải 1 mảng không
+					       					<a data-toggle="modal" data-target="#myModalm1" class="view-kq">Xem code</a>
+					       				</p>
+					       				<div class="modal fade" id="myModalm1" role="dialog">
+										    <div class="modal-dialog modal-lg">
+										      <div class="modal-content">
+										        <div class="modal-header">
+										          <button type="button" class="close" data-dismiss="modal">&times;</button>
+										          <h4 class="modal-title">Kiểm tra kiểu dữ liệu mảng
+										        </div>
+										        <div class="modal-body">
+											        <pre class="brush: js;">
+											        	<script type="text/javascript">
+															var name = "phan trung phu";
+				
+															function check_arr(name){
+																if( Object.prototype.toString.call( name ) === '[object Array]' ) {
+																    return 1;
+																}
+																return 0;
+															}
+															console.log(check_arr("rtrungphi"));
+															console.log(check_arr([1, 2, 4, 0]));
+
+														</script>
+													</pre>
+										        </div>
+										        <div class="modal-footer">
+										          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										        </div>
+										      </div>
+										    </div>
+									  	</div>
+					       			</li>
+					       			<li>
+					       				<p>
+					       					Chuyển mảng thành chuỗi
+					       					<a data-toggle="modal" data-target="#myModalm2" class="view-kq">Xem code</a>
+					       				</p>
+					       				<div class="modal fade" id="myModalm2" role="dialog">
+										    <div class="modal-dialog modal-lg">
+										      <div class="modal-content">
+										        <div class="modal-header">
+										          <button type="button" class="close" data-dismiss="modal">&times;</button>
+										          <h4 class="modal-title">Chuyển mảng thành chuỗi
+										        </div>
+										        <div class="modal-body">
+											        <pre class="brush: js;">
+											        	<script type="text/javascript">
+															var arr = ["Phan","Trung","Phu"];
+
+															console.log(arr.join(" "));
+															console.log(arr.join(","));
+														</script>
+													</pre>
+										        </div>
+										        <div class="modal-footer">
+										          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										        </div>
+										      </div>
+										    </div>
+									  	</div>
+					       			</li>
+
+					       			<li>
+					       				<p>
+					       					Sắp xếp tăng giảm trong mảng
+											<a data-toggle="modal" data-target="#myModalm3" class="view-kq">Xem code</a>
+				       					</p>
+				       					<div class="modal fade" id="myModalm3" role="dialog">
+										    <div class="modal-dialog modal-lg">
+										      <div class="modal-content">
+										        <div class="modal-header">
+										          <button type="button" class="close" data-dismiss="modal">&times;</button>
+										          <h4 class="modal-title">Sắp xếp tăng giảm trong mảng
+										        </div>
+										        <div class="modal-body">
+											        <pre class="brush: js;">
+											        	<script type="text/javascript">
+
+											        		// nêu ms giảm dần thì b - a
+															function sortAss(a,b) {
+																return a-b;
+															}
+															var arr = [4, 2, 10, 6, 9];
+															console.log(arr.sort(sortAss))
+														</script>
+													</pre>
+										        </div>
+										        <div class="modal-footer">
+										          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										        </div>
+										      </div>
+										    </div>
+									  	</div>
+
+					       				
+					       			</li>
+
+					       			<li>
+					       				<p>
+					       					Đếm số lần xuất hiện nhiều nhất trong mảng 
+					       					<a data-toggle="modal" data-target="#myModalm4" class="view-kq">Xem code</a>
+					       				</p>
+					       				<div class="modal fade" id="myModalm4" role="dialog">
+										    <div class="modal-dialog modal-lg">
+										      <div class="modal-content">
+										        <div class="modal-header">
+										          <button type="button" class="close" data-dismiss="modal">&times;</button>
+										          <h4 class="modal-title">Đếm số lần xuất hiện nhiều nhất trong mảng
+										        </div>
+										        <div class="modal-body">
+											        <pre class="brush: js;">
+											        	<script type="text/javascript">
+											        		var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2,2,2,2,2,2,2, 4, 9, 3];
+															var mf = 1;
+															var m = 0;
+															var item;
+															for (var i=0; i<arr1.length; i++)
+															{
+														        for (var j=i; j<arr1.length; j++)
+														        {
+														                if (arr1[i] == arr1[j])
+														                 m++;
+														                if (mf<m)
+														                {
+														                  mf=m; 
+														                  item = arr1[i];
+														                }
+														        }
+														        m=0;
+															}
+															console.log(item+" ( " +mf +" times ) ") ;
+														</script>
+													</pre>
+										        </div>
+										        <div class="modal-footer">
+										          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										        </div>
+										      </div>
+										    </div>
+									  	</div>
+
+					       			</li>
+					       		</ol>
+					      	</div>
+					    </div>
+				  	</div>
+
+				  	<div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingFor">
+					      	<h4 class="panel-title">
+					        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFor" aria-expanded="false" aria-controls="collapseFor">
+					          		DOM
+					        	</a>
+					      </h4>
+					    </div>
+					    <div id="collapseFor" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFor">
+					      	<div class="panel-body">
+					        Nôi Dung
+					      	</div>
+					    </div>
+				  	</div>
+
+				  	<div class="panel panel-default">
+					    <div class="panel-heading" role="tab" id="headingFive">
+					      	<h4 class="panel-title">
+					        	<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+					          		5
+					        	</a>
+					      </h4>
+					    </div>
+					    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+					      	<div class="panel-body">
+					        Nôi Dung
+					      	</div>
+					    </div>
+				  	</div>
+				</div>
+		    </div>
+		    <div id="menu2" class="tab-pane fade">
+		      	<h3>Menu 2</h3>
+		      	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+		    </div>
+		    <div id="menu3" class="tab-pane fade">
+		      	<h3>Menu 3</h3>
+		      	<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		    </div>
+	  	</div>
+		
+
+		
+	</div>
+	<!--end container-->
+</body>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/js.js"></script>
+</html>
